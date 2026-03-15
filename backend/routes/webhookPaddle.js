@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { PrismaClient } = require('../config/prismaClient');
-const prisma = new PrismaClient();
+const prisma = require('../config/prismaClient');
 
 // Endpoint webhook Paddle
 router.post('/webhook/paddle', async (req, res) => {
