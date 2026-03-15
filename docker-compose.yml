@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: mengsinch
+      POSTGRES_PASSWORD: mengsinchpw
+      POSTGRES_DB: mengsinchdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    restart: always
+    environment:
+      DATABASE_URL: postgres://mengsinch:mengsinchpw@postgres:5432/mengsinchdb
+      ADMIN_USER: admin
+      ADMIN_PASS: admin123
+      JWT_SECRET: supersecretjwt
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build: ./frontend
+    restart: always
+    ports:
+      - "3001:3001"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+
+volumes:
+  postgres_data:

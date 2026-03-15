@@ -7,105 +7,106 @@ Este repositorio proporciona un backend mínimo en Node.js con Express para un a
 
 Estructura:
 - backend/ (todo el código del API y lógica de negocio)
-   - routes/
-      - webhookWhatsApp.js
-      - webhookMessenger.js
-      - webhookInstagram.js
-   - services/
-      - channelWhatsApp.js
-      - channelMessenger.js
-      - channelInstagram.js
-      - aiService.js
-      - catalogService.js
-      - paymentService.js
-- frontend/ (pendiente para Step 4; se añadirá más adelante)
 
-Qué viene en este Step
-- Webhook /webhooks/whatsapp para recibir mensajes
-- Webhook /webhooks/messenger para Messenger
-- Webhook /webhooks/instagram para Instagram
-- Adaptadores básicos para enviar respuestas en cada canal
-- Servicio de IA (OpenAI) para respuestas automáticas
-- Servicio de catálogo en memoria (stock/tallas)
-- Servicio de pagos con Stripe (Checkout)
+   # mengsinch.ia
 
-Cómo usar
-1) Copia este proyecto en tu entorno de desarrollo.
-2) En backend/.env.example coloca tus llaves y configura:
-   - OPENAI_API_KEY=tu_api_key_de_openai
-   - WHATSAPP_TOKEN=tu_token_whatsapp
-   - WHATSAPP_PHONE_ID=tu_phone_id_whatsapp
-   - STRIPE_API_KEY=tu_api_key_stripe
-   - FACEBOOK_PAGE_TOKEN=token_de_página_facebook
-   - INSTAGRAM_ACCESS_TOKEN=token_de_instagram
-   - INSTAGRAM_USER_ID=id_de_cuenta_instagram
-   - PORT=3000
-3) Ejecuta:
-   - cd backend
-   - npm install
-   - cp .env.example .env (o manualmente crear .env con las claves)
-   - npm run dev
-4) Prueba:
-   - GET http://localhost:3000/health debe devolver { ok: true, timestamp: ... }
-   - POST a /webhooks/whatsapp desde tu sandbox de WhatsApp Cloud API
-   - POST a /webhooks/messenger desde Facebook Messenger (verifica el webhook en Facebook Developers)
-   - POST a /webhooks/instagram desde Instagram (verifica el webhook en Facebook Developers)
+   ![Logo mengsinch.ia](frontend/public/logo.svg)
 
-Siguientes pasos
-- Paso 4: crear un panel admin (Next.js) y conectar PostgreSQL
-- Paso 5: añadir TikTok si la API de mensajería está disponible y completar el flujo de pagos
+   **Panel de ventas multicanal con IA, WhatsApp, Messenger, Instagram y Stripe**
 
-Notas de seguridad y cumplimiento
-- Asegúrate de manejar correctamente las firmas/webhooks de cada canal.
-- Obtén consentimiento para mensajes proactivos y respeta límites de cada plataforma.
-- Usa claves de entorno y no las compartas en el código.
+   ---
 
-Configuración de Messenger e Instagram
-- Crea una App en Facebook for Developers y vincúlala a tu página de Facebook (Messenger) y cuenta de Instagram Business.
-- Obtén los tokens y IDs necesarios y configúralos en .env.
-- Registra los webhooks en Facebook Developers:
-   - Messenger: /webhooks/messenger
-   - Instagram: /webhooks/instagram
-- Verifica el token de verificación (verify token) en la configuración de webhooks.
-- Suscríbete a los eventos de mensajes para ambos canales.
+   ## ¿Qué es mengsinch.ia?
 
-# Panel Admin (Step 4)
+   Una solución SaaS para gestionar ventas, productos y canales de mensajería desde un panel admin moderno. Incluye IA, pagos, y es ideal para vender por suscripción mensual.
 
-## Migración y configuración
+   ---
 
-1. Instala dependencias:
-   - Backend: `npm install @prisma/client prisma pg`
-   - Frontend: `npm install`
+   ## Características
 
-2. Configura la variable `DATABASE_URL` en tu `.env` del backend:
-   ```
-   DATABASE_URL=postgresql://usuario:password@host:puerto/db
-   ```
+   - Panel admin Next.js protegido por JWT
+   - CRUD de productos, variantes y stock
+   - Configuración de canales (WhatsApp, Messenger, Instagram)
+   - Persistencia con PostgreSQL y Prisma
+   - Seeds de ejemplo para demo
+   - Docker y docker-compose para despliegue rápido
+   - Scripts de prueba automáticos
+   - Branding mengsinch.ia (logo azul)
+   - Preparado para venta por suscripción mensual
 
-3. Ejecuta migraciones Prisma:
-   ```
-   npx prisma migrate dev --name init
-   ```
+   ---
 
-4. Inicia el backend:
-   ```
-   node backend/index.js
-   ```
+   ## Instalación rápida
 
-5. Inicia el frontend:
-   ```
-   cd frontend
-   npm run dev
-   ```
+   1. Clona el repo:
+      ```bash
+      git clone https://github.com/ezemario90-oss/multi-channel-sales-step4-admin.git
+      cd multi-channel-sales-step4-admin
+      ```
 
-## Prueba
+   2. Levanta el stack:
+      ```bash
+      docker-compose up --build
+      ```
 
-- Accede a `/admin/products` y `/admin/settings` en el frontend para gestionar productos y configuración de canales.
-- Los endpoints admin están disponibles en el backend:
-  - GET/POST/PUT/DELETE `/admin/products`
-  - GET/PUT `/admin/settings`
+   3. Ejecuta seeds:
+      ```bash
+      docker-compose exec backend node prisma/seed.js
+      ```
 
-## Notas
+   4. Prueba endpoints:
+      ```powershell
+      .\test_mengsinch.ps1
+      ```
+
+   ---
+
+   ## Variables de entorno
+
+   - `DATABASE_URL`: conexión PostgreSQL
+   - `ADMIN_USER`, `ADMIN_PASS`: usuario y contraseña admin
+   - `JWT_SECRET`: clave JWT
+   - Claves de WhatsApp, Messenger, Instagram, Stripe, OpenAI
+
+   Ejemplo en backend/.env.example
+
+   ---
+
+   ## Demo y venta
+
+   - Panel admin: http://localhost:3001/admin/login
+   - Acceso demo: admin / admin123
+   - Listo para personalizar y vender por suscripción mensual
+
+   ---
+
+   ## Branding y personalización
+
+   - Logo mengsinch.ia (azul)
+   - Textos y colores personalizables
+   - Puedes adaptar el nombre, logo y colores para tu cliente
+
+   ---
+
+   ## Cómo vender la app
+
+   - Ideal para comercios, marcas, emprendedores
+   - Panel centralizado para ventas multicanal
+   - IA para respuestas automáticas
+   - Pagos integrados
+   - Suscripción mensual fácil de gestionar
+
+   ---
+
+   ## Contacto y soporte
+
+   Para soporte, personalización o dudas, contáctame por GitHub o email.
+
+   ---
+
+   ## Licencia
+
+   Uso comercial permitido. Puedes vender la app bajo tu marca.
 
 - El backend mantiene la lógica de IA, stock en memoria y Stripe.
 - El panel admin usa PostgreSQL para persistencia.

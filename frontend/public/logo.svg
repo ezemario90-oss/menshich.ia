@@ -1,0 +1,7 @@
+<!-- Logo mengsinch.ia (azul) -->
+<svg width="180" height="60" viewBox="0 0 180 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="60" rx="12" fill="#1976D2"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#fff">mengsinch.ia</text>
+  <circle cx="30" cy="30" r="18" fill="#fff" opacity="0.15"/>
+  <circle cx="150" cy="30" r="10" fill="#fff" opacity="0.15"/>
+</svg>

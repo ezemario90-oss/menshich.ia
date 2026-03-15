@@ -13,7 +13,24 @@ app.use(bodyParser.json());
 app.use('/', whatsappRouter);
 app.use('/', messengerRouter);
 app.use('/', instagramRouter);
-app.use('/', adminRouter);
+const authRouter = require('./routes/auth');
+const jwt = require('jsonwebtoken');
+
+// Middleware para proteger rutas admin
+const JWT_SECRET = process.env.JWT_SECRET || 'supersecretjwt';
+function verifyToken(req, res, next) {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+  if (!token) return res.status(401).json({ error: 'Token requerido' });
+  jwt.verify(token, JWT_SECRET, (err, user) => {
+    if (err) return res.status(403).json({ error: 'Token inválido' });
+    req.user = user;
+    next();
+  });
+}
+
+app.use('/auth', authRouter);
+app.use('/admin', verifyToken, adminRouter);
 
 // Health check
 app.get('/health', (req, res) => {
