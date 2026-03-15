@@ -44,6 +44,12 @@ app.use('/auth', authRouter);
 app.use('/admin', verifyToken, adminRouter);
 
 // Health check
+// Endpoint raíz
+app.get('/', (req, res) => {
+  res.json({ message: 'Backend funcionando correctamente' });
+});
+
+// Health check
 app.get('/health', (req, res) => {
   res.json({ ok: true, timestamp: Date.now() });
 });
