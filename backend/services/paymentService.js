@@ -58,8 +58,7 @@ async function sendWhatsAppReminder(user, daysLeft) {
   });
 }
 // Servicio para avisos de vencimiento de suscripción
-const { PrismaClient } = require('../config/prismaClient');
-const prisma = new PrismaClient();
+const prisma = require('../config/prismaClient');
 const nodemailer = require('nodemailer');
 
 // Configuración de email (adaptar según tu entorno)
