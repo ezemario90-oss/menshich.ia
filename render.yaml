@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: frontend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    repo: <TU_REPO_GITHUB>
+    branch: main
+    rootDir: frontend
+    envVars:
+      - key: BACKEND_URL
+        value: https://menshichia-backend.onrender.com
+      - key: NEXT_PUBLIC_FACEBOOK_CLIENT_ID
+        value: tu-app-id
+
+  - type: web
+    name: backend
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    repo: <TU_REPO_GITHUB>
+    branch: main
+    rootDir: backend
+    envVars:
+      - key: DATABASE_URL
+        value: <TU_URL_POSTGRES>
+      - key: JWT_SECRET
+        value: <TU_SECRETO>
+      - key: FB_APP_SECRET
+        value: tu-app-secret

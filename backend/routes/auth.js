@@ -7,14 +7,21 @@ const ADMIN_USER = process.env.ADMIN_USER || 'admin';
 const ADMIN_PASS = process.env.ADMIN_PASS || 'admin123';
 const JWT_SECRET = process.env.JWT_SECRET || 'supersecretjwt';
 
-// Login endpoint
-router.post('/login', (req, res) => {
+// Login endpoint con verificación de pago
+const prisma = require('../config/prismaClient');
+router.post('/login', async (req, res) => {
   const { username, password } = req.body;
-  if (username === ADMIN_USER && password === ADMIN_PASS) {
-    const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '2h' });
-    return res.json({ token });
+  // Busca usuario en base de datos
+  const user = await prisma.user.findUnique({ where: { username } });
+  if (!user || user.password !== password) {
+    return res.status(401).json({ error: 'Credenciales inválidas' });
   }
-  res.status(401).json({ error: 'Credenciales inválidas' });
+  // Verifica estado de pago
+  if (user.paymentStatus !== 'active') {
+    return res.status(403).json({ error: 'Pago mensual vencido. Acceso bloqueado.' });
+  }
+  const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '2h' });
+  return res.json({ token });
 });
 
 module.exports = router;

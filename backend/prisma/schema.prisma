@@ -1,3 +1,11 @@
+model User {
+  id           Int      @id @default(autoincrement())
+  username     String   @unique
+  email        String   @unique
+  password     String
+  paymentStatus String  @default("active") // "active" o "expired"
+  lastPayment  DateTime?
+}
 // Prisma schema for Step 4
 // Define models: Product, Variant, Order, ChannelConfig
 
@@ -33,6 +41,7 @@ model Order {
   total           Float
   status          String
   paymentIntentId String
+  aiStyle      String   @default("amigable") // Estilos IA: amigable, formal, comercial, breve, experto, humorístico, motivador, educativo, multilingüe. Permite combinación separados por coma.
   channel         String
   createdAt       DateTime @default(now())
 }

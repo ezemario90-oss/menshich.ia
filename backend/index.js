@@ -1,3 +1,12 @@
+// Cron para avisos automáticos de renovación
+const { checkRenewalReminders } = require('./services/paymentService');
+const cron = require('node-cron');
+
+// Ejecuta la tarea todos los días a las 9:00 AM
+cron.schedule('0 9 * * *', async () => {
+  console.log('Ejecutando avisos de renovación de suscripción...');
+  await checkRenewalReminders();
+});
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -5,6 +14,7 @@ const whatsappRouter = require('./routes/webhookWhatsApp');
 const messengerRouter = require('./routes/webhookMessenger');
 const instagramRouter = require('./routes/webhookInstagram');
 const adminRouter = require('./routes/admin');
+const webhookPaddle = require('./routes/webhookPaddle');
 
 const app = express();
 app.use(bodyParser.json());
@@ -13,6 +23,7 @@ app.use(bodyParser.json());
 app.use('/', whatsappRouter);
 app.use('/', messengerRouter);
 app.use('/', instagramRouter);
+app.use(webhookPaddle);
 const authRouter = require('./routes/auth');
 const jwt = require('jsonwebtoken');
 
