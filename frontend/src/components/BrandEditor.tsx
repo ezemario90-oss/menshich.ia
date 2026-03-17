@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 type BrandDraft = {
-  logoUrl?: string;
+  logoUrl?: string; 
   primary: string;
   background: string;
   text: string;
