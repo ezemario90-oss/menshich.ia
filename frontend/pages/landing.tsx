@@ -1,4 +1,15 @@
 import React, { useState } from 'react';
+
+// Declaración global para Paddle
+declare global {
+  interface Window {
+    Paddle?: {
+      Checkout: {
+        open: (options: any) => void;
+      };
+    };
+  }
+}
 import { FaCheckCircle, FaRocket, FaLock, FaRobot, FaWhatsapp, FaFacebook, FaInstagram, FaDollarSign } from 'react-icons/fa';
 
 const FEATURES = [
