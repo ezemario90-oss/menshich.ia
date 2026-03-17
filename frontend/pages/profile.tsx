@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MainLayout from '../src/layout/MainLayout';
 
 const ProfilePage: React.FC = () => {
