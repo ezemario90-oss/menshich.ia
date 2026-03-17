@@ -87,6 +87,11 @@ const ChannelsPage: React.FC = () => {
             >
               Configurar
             </button>
-
+          </div>
+        ))}
+      </div>
+    </MainLayout>
+  );
+};
 
 export default ChannelsPage;
