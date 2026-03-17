@@ -88,26 +88,5 @@ const ChannelsPage: React.FC = () => {
               Configurar
             </button>
 
-const ChannelsPage = () => {
-  useEffect(() => {
-    if (typeof document !== "undefined" && !document.getElementById("channels-anim")) {
-      const style = document.createElement("style");
-      style.id = "channels-anim";
-      style.innerHTML = `
-        @keyframes fadein { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-fadein { animation: fadein 0.7s ease forwards; }
-        .ripple { position: absolute; width: 40px; height: 40px; background: rgba(16,185,129,0.2); border-radius: 50%; pointer-events: none; transform: scale(0); animation: ripple 0.6s linear forwards; z-index: 1; }
-        @keyframes ripple { to { transform: scale(2); opacity: 0; } }
-      `;
-      document.head.appendChild(style);
-    }
-  }, []);
-  // ...existing code...
-          </div>
-        ))}
-      </div>
-    </MainLayout>
-  );
-};
 
 export default ChannelsPage;
