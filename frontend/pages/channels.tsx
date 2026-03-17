@@ -87,7 +87,6 @@ const ChannelsPage: React.FC = () => {
             >
               Configurar
             </button>
-// ...existing code...
 
 const ChannelsPage = () => {
   useEffect(() => {
