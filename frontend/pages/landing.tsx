@@ -27,6 +27,8 @@ const FAQ = [
   { q: '¿Qué redes puedo conectar?', a: 'WhatsApp, Facebook, Instagram y más.' },
 ];
 
+
+export default function LandingPage() {
   const [paid, setPaid] = useState(false);
 
   // Paddle: abre checkout y callback
