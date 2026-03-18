@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import FacebookProvider from "next-auth/providers/facebook";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import prisma from "../../../src/lib/prisma";
+import prisma from "../lib/prisma";
 
 export default NextAuth({
   providers: [
