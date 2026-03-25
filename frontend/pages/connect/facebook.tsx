@@ -1,7 +1,8 @@
 import { signIn, useSession } from "next-auth/react";
 
 export default function ConnectFacebook() {
-  const { data: session } = useSession();
+  const sessionHook = useSession();
+  const session = sessionHook && sessionHook.data ? sessionHook.data : null;
 
   const handleConnect = () => {
     signIn("facebook");

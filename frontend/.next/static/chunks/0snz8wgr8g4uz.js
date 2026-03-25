@@ -1,0 +1,6 @@
+__turbopack_load_page_chunks__("/configure-channels", [
+  "static/chunks/0p1~k7.5khx3q.js",
+  "static/chunks/0q1q59_zs06c5.js",
+  "static/chunks/0.2e_m8hc-ee9.js",
+  "static/chunks/turbopack-0rpnju98uoqz..js"
+])

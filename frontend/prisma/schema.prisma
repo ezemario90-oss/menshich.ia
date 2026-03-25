@@ -1,13 +1,9 @@
-// Prisma schema for Step 4
-// Define models: Product, Variant, Order, ChannelConfig
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
 }
 
 model Product {
@@ -41,4 +37,30 @@ model ChannelConfig {
   id          Int      @id @default(autoincrement())
   channelName String
   config      Json
+}
+
+model Account {
+  id                Int      @id @default(autoincrement())
+  userId            Int
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  createdAt         DateTime @default(now())
+  user              User     @relation(fields: [userId], references: [id])
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  name          String?
+  email         String?  @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
 }

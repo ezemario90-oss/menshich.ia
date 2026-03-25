@@ -1,0 +1,115 @@
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/": [
+      "static/chunks/05.g2n~-43dl7.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-0leqwtad931go.js"
+    ],
+    "/_app": [
+      "static/chunks/0noanhlt8ffku.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-0j_1-j1bd~le4.js"
+    ],
+    "/_error": [
+      "static/chunks/17lsyfn-ajas0.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-0.roza7v9mitu.js"
+    ],
+    "/admin/login": [
+      "static/chunks/0xb3w9s6h9d_6.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-04bfopv8ey0h6.js"
+    ],
+    "/admin/products": [
+      "static/chunks/1656vqbp8bj8l.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-0a0s_85var~zv.js"
+    ],
+    "/admin/settings": [
+      "static/chunks/0j30r9lfakwrw.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-12~hi5_r_xd~u.js"
+    ],
+    "/brand": [
+      "static/chunks/0p7g1plw0c2t0.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-12~dglalrvi.r.js"
+    ],
+    "/channels": [
+      "static/chunks/03paeqvafuq9p.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-07acvixlg17h1.js"
+    ],
+    "/configure-channels": [
+      "static/chunks/0p1~k7.5khx3q.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-0rpnju98uoqz..js"
+    ],
+    "/connect/facebook": [
+      "static/chunks/06z.r.hzockyg.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-0znbb8h94loqb.js"
+    ],
+    "/dashboard": [
+      "static/chunks/0etzc.jvm5_ru.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-0u37xgkoff6r~.js"
+    ],
+    "/landing": [
+      "static/chunks/0a2goubzw7l.~.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/01vkqywwh0dcw.js",
+      "static/chunks/turbopack-0pylekk1ocv~_.js"
+    ],
+    "/orders": [
+      "static/chunks/0yildmz-o5-sb.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-02.ngg0lwekio.js"
+    ],
+    "/products": [
+      "static/chunks/02ox3bh4.bz~x.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-1348-3keu4nvq.js"
+    ],
+    "/profile": [
+      "static/chunks/14bsm4397cf.3.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-05~u_omzs0f-v.js"
+    ],
+    "/register": [
+      "static/chunks/0q0lcfaw95qsk.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-0il1bglpq1zs2.js"
+    ],
+    "/users": [
+      "static/chunks/0.h0dtsz8r2fx.js",
+      "static/chunks/0q1q59_zs06c5.js",
+      "static/chunks/0.2e_m8hc-ee9.js",
+      "static/chunks/turbopack-0w3_ky2kmuz~v.js"
+    ]
+  },
+  "devFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [
+    "static/Bpqv9eeP0l_X7g5TM62-K/_buildManifest.js",
+    "static/Bpqv9eeP0l_X7g5TM62-K/_ssgManifest.js",
+    "static/Bpqv9eeP0l_X7g5TM62-K/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": []
+};

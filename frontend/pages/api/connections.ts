@@ -1,3 +1,4 @@
+
 type UserWithId = {
   name?: string;
   email?: string;
@@ -11,6 +12,7 @@ import authOptions from "./auth/[...nextauth]";
 import type { Session } from "next-auth";
 import type { NextApiRequest, NextApiResponse } from "next";
 import prisma from "./lib/prisma";
+// ...existing code...
 
 export default async function handler(
   req: NextApiRequest,
@@ -21,7 +23,7 @@ export default async function handler(
 
   const userId = session.user.id;
   const accounts = await prisma.account.findMany({
-    where: { userId },
+    where: { userId: Number(userId) },
   });
 
   res.json({ connections: accounts.map((a) => ({

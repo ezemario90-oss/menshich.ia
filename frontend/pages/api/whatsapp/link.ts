@@ -1,4 +1,4 @@
-import prisma from "../../../src/lib/prisma";
+import prisma from "../lib/prisma";
 
 export default async function handler(req: any, res: any) {
   if (req.method !== "POST") return res.status(405).end();
@@ -7,7 +7,8 @@ export default async function handler(req: any, res: any) {
 
   const acct = await prisma.account.create({
     data: {
-      userId,
+      userId: Number(userId),
+      type: "oauth", // o el tipo que corresponda
       provider: "whatsapp",
       providerAccountId: phoneNumberId,
       access_token: accessToken,
