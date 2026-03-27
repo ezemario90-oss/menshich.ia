@@ -1,0 +1,10 @@
+Adjunto para reporte de bug Prisma:
+
+---
+
+## schema.prisma
+
+(importado automáticamente)
+
+---
+

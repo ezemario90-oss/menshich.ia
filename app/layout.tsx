@@ -1,17 +1,7 @@
-"use client";
-import Link from "next/link";
+<input type="text" placeholder="PRUEBA RENDER" className="w-full rounded-md border border-gray-200 px-3 py-2 text-sm" />
+import "./globals.css";
+import Sidebar from "../components/Sidebar";
 import { useState } from "react";
-
-const NAV = [
-  { href: "/dashboard", label: "Dashboard" },
-  { href: "/productos", label: "Productos" },
-  { href: "/pedidos", label: "Pedidos" },
-  { href: "/usuarios", label: "Usuarios" },
-  { href: "/marca", label: "Marca" },
-  { href: "/canales", label: "Canales" },
-  { href: "/configurar-canales", label: "Configurar Canales" },
-  { href: "/perfil", label: "Perfil" },
-];
 
 export default function RootLayout({ children }) {
   const [collapsed, setCollapsed] = useState(false);
@@ -19,21 +9,9 @@ export default function RootLayout({ children }) {
     <html lang="es" data-theme="default">
       <body className="bg-[rgb(var(--bg))] text-[rgb(var(--text))]">
         <div className="flex h-screen">
-          {/* Sidebar */}
-          <aside className={`${collapsed ? "w-16" : "w-64"} bg-[rgb(var(--surface))] border-r border-gray-200 z-10 transition-all duration-200`}>
-            <div className="h-12 flex items-center justify-between p-4 border-b">
-              <span className="font-semibold text-lg">mengchig.ia</span>
-              <button aria-label="Ocultar menú" onClick={() => setCollapsed(!collapsed)}>
-                <span>{collapsed ? ">" : "<"}</span>
-              </button>
-            </div>
-            <nav className="mt-4">
-              {NAV.map((n) => (
-                <Link key={n.href} href={n.href} className="flex items-center gap-3 px-4 py-2 hover:bg-gray-100">
-                  <span className="text-sm">{n.label}</span>
-                </Link>
-              ))}
-            </nav>
+          {/* Sidebar futurista único */}
+          <aside className={`sidebar-nav-container ${collapsed ? "w-16" : "w-64"} transition-all duration-200 flex flex-col`}> 
+            <Sidebar />
           </aside>
           {/* Contenido principal */}
           <div className="flex-1 flex flex-col">
@@ -42,7 +20,7 @@ export default function RootLayout({ children }) {
               <div className="flex items-center gap-3">
                 <button className="md:hidden" aria-label="Abrir menú"></button>
                 <div className="w-full max-w-md">
-                  <input type="text" placeholder="Buscar en la app..." className="w-full rounded-md border border-gray-200 px-3 py-2 text-sm" />
+                  <input type="text" placeholder="PRUEBA RENDER" className="w-full rounded-md border border-gray-200 px-3 py-2 text-sm" />
                 </div>
               </div>
               <div className="flex items-center gap-3">

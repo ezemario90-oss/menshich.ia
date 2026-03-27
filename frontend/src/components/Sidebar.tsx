@@ -1,51 +1,40 @@
 import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const sections = [
-	{ label: 'Dashboard', icon: '🏠' },
-	{ label: 'Productos', icon: '📦' },
-	{ label: 'Variantes', icon: '🧩' },
-	{ label: 'Pedidos', icon: '📝' },
-	{ label: 'Canales', icon: '🔗' },
-	{ label: 'Configurar canales', icon: '⚙️' },
-	{ label: 'Mi Marca', icon: '⭐' },
-	{ label: 'Usuarios', icon: '👥' },
-	{ label: 'Perfil', icon: '🙍‍♂️' },
-	{ label: 'Cerrar sesión', icon: '🚪' },
+  { label: 'Dashboard', icon: '🏠', href: '/dashboard' },
+  { label: 'Productos', icon: '📦', href: '/productos' },
+  { label: 'Variantes', icon: '🧩', href: '/variantes' },
+  { label: 'Pedidos', icon: '📝', href: '/pedidos' },
+  { label: 'Canales', icon: '🔗', href: '/canales' },
+  { label: 'Configurar canales', icon: '⚙️', href: '/configurar-canales' },
+  { label: 'Mi Marca', icon: '⭐', href: '/marca' },
+  { label: 'Usuarios', icon: '👥', href: '/usuarios' },
+  { label: 'Perfil', icon: '🙍‍♂️', href: '/perfil' },
+  { label: 'Cerrar sesión', icon: '🚪', href: '/logout' },
 ];
 
 const Sidebar: React.FC = () => {
-	return (
-		<nav className="sidebar-nav">
-			<ul>
-				{sections.map((s) => (
-					<li key={s.label}>
-						<span className="icon">{s.icon}</span>
-						<span>{s.label}</span>
-					</li>
-				))}
-			</ul>
-			<style jsx>{`
-				.sidebar-nav {
-					padding: 24px 0;
-				}
-				ul { list-style: none; margin: 0; padding: 0; }
-				li {
-					display: flex;
-					align-items: center;
-					gap: 12px;
-					padding: 12px 24px;
-					cursor: pointer;
-					border-radius: 8px;
-					transition: background 0.2s;
-				}
-				li:hover {
-					background: var(--brand-primary);
-					color: var(--brand-contrast);
-				}
-				.icon { font-size: 20px; }
-			`}</style>
-		</nav>
-	);
+  const router = useRouter();
+  const pathname = router.pathname;
+  return (
+    <nav className="sidebar-nav">
+      <ul>
+        {sections.map((s) => {
+          const isActive = pathname === s.href || (s.href !== '/' && pathname.startsWith(s.href));
+          return (
+            <li key={s.label} className={isActive ? 'active' : ''}>
+              <Link href={s.href} className="sidebar-link">
+                <span className="icon">{s.icon}</span>
+                <span className="label-text">{s.label}</span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
 };
 
 export default Sidebar;

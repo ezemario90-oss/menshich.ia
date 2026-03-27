@@ -1,7 +1,6 @@
 import React from 'react';
 import MainLayout from '../src/layout/MainLayout';
 import BrandEditor from '../src/components/BrandEditor';
-
 const BrandPage: React.FC = () => {
   const [fadeIn, setFadeIn] = React.useState(false);
   React.useEffect(() => {
