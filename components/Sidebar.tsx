@@ -1,46 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const sections = [
   { label: 'Dashboard', icon: '🏠', href: '/dashboard' },
   { label: 'Productos', icon: '📦', href: '/productos' },
-  { label: 'Pedidos', icon: '📝', href: '/pedidos' },
-  { label: 'Usuarios', icon: '👥', href: '/usuarios' },
-  { label: 'Marca', icon: '⭐', href: '/marca' },
+  { label: 'Variantes', icon: '🧩', href: '/variantes' },
+  { label: 'Pedidos', icon: '📄', href: '/pedidos' },
   { label: 'Canales', icon: '🔗', href: '/canales' },
-  { label: 'Configurar Canales', icon: '⚙️', href: '/configurar-canales' },
-  { label: 'Perfil', icon: '🙍‍♂️', href: '/perfil' },
+  { label: 'Configurar canales', icon: '⚙️', href: '/configurar-canales' },
+  { label: 'Mi Marca', icon: '⭐', href: '/marca' },
 ];
-
-
-import { usePathname } from 'next/navigation';
-
 
 const Sidebar: React.FC = () => {
   const pathname = usePathname();
   return (
-    <nav className="sidebar-nav">
-      <ul>
-        {sections.map((s) => {
-          // Resalta si la ruta es exactamente igual o si pathname empieza con href y href no es '/'
-          const isActive =
-            pathname === s.href ||
-            (s.href !== '/' && pathname && pathname.startsWith(s.href));
-          return (
-            <li key={s.label} className={isActive ? 'active' : ''}>
-              <Link href={s.href} className="sidebar-link">
-                <span className="icon bounce">{s.icon}</span>
-                <span className="label-text">{s.label}</span>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-      {/* Los estilos ahora están en globals.css */}
+    <nav className="sidebar">
+      <div className="sidebar-title">Panel Futurista</div>
+      {sections.map((item, idx) => {
+        const isActive = pathname === item.href || (item.href !== '/' && pathname && pathname.startsWith(item.href));
+        return (
+          <Link
+            href={item.href}
+            key={item.label}
+            className={`menu-item${isActive ? ' active' : ''}`}
+          >
+            <i>{item.icon}</i>
+            <span>{item.label}</span>
+          </Link>
+        );
+      })}
     </nav>
   );
 };
-
-export default Sidebar;
 
 export default Sidebar;
