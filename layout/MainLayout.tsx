@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from '../theme/ThemeProvider';
 import Sidebar from '../components/Sidebar';
 import Topbar from '../components/Topbar';
-import '../frontend/styles/SidebarFuturista.css';
+import '../styles/SidebarFuturista.css';
 
 interface Props {
   children: React.ReactNode;
