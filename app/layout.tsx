@@ -1,5 +1,6 @@
-<input type="text" placeholder="PRUEBA RENDER" className="w-full rounded-md border border-gray-200 px-3 py-2 text-sm" />
 import "./globals.css";
+import "./globals.css";
+import "./styles/SidebarFuturista.css";
 import Sidebar from "../components/Sidebar";
 import { useState } from "react";
 
@@ -10,7 +11,7 @@ export default function RootLayout({ children }) {
       <body className="bg-[rgb(var(--bg))] text-[rgb(var(--text))]">
         <div className="flex h-screen">
           {/* Sidebar futurista único */}
-          <aside className={`sidebar-nav-container ${collapsed ? "w-16" : "w-64"} transition-all duration-200 flex flex-col`}> 
+          <aside className={`sidebar ${collapsed ? "w-16" : "w-64"} transition-all duration-200 flex flex-col`}>
             <Sidebar />
           </aside>
           {/* Contenido principal */}
