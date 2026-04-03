@@ -3,7 +3,7 @@ import { signIn } from "next-auth/react";
 import { useState } from "react";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
@@ -13,7 +13,7 @@ export default function LoginPage() {
     const response = await fetch("/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username: email, password }),
+      body: JSON.stringify({ username, password }),
     });
     const data = await response.json();
     if (response.ok && data.token) {
@@ -32,13 +32,13 @@ export default function LoginPage() {
       <h1 className="text-xl font-semibold mb-4">Iniciar sesión</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium mb-1">Correo</label>
+          <label className="block text-sm font-medium mb-1">Usuario</label>
           <input
-            type="email"
+            type="text"
             className="w-full border rounded-md px-3 py-2 text-sm"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder="correo@cliente.com"
+            value={username}
+            onChange={e => setUsername(e.target.value)}
+            placeholder="usuario"
             required
           />
         </div>
