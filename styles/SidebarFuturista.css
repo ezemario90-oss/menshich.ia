@@ -1,0 +1,7 @@
+/* SidebarFuturista.css - ejemplo básico */
+.sidebar-futurista {
+  background: linear-gradient(135deg, #1e293b 0%, #0ea5e9 100%);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
