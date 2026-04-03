@@ -29,7 +29,7 @@ export default function DashboardPage() {
       </div>
       {/* Tarjetas métricas con glassmorphism y animaciones */}
       <section aria-label="Dashboard" className="dashboard-cards">
-        <div className="dashboard-card" style={{'--card-accent': '#3B82F6'}}>
+        <div className="dashboard-card" style={{'--card-accent': '#3B82F6'} as any}>
           <div className="card-icon bg-gradient-to-tr from-blue-400 to-blue-700 shadow-lg">
             <span style={{fontSize: '2.6rem', filter: 'drop-shadow(0 2px 8px #3B82F6AA)'}}>💰</span>
           </div>
@@ -37,7 +37,7 @@ export default function DashboardPage() {
           <div className="card-value">$12,430</div>
           <div className="card-diff text-green-600">+8.2%</div>
         </div>
-        <div className="dashboard-card" style={{'--card-accent': '#22d3ee'}}>
+        <div className="dashboard-card" style={{'--card-accent': '#22d3ee'} as any}>
           <div className="card-icon bg-gradient-to-tr from-cyan-400 to-cyan-700 shadow-lg">
             <span style={{fontSize: '2.6rem', filter: 'drop-shadow(0 2px 8px #22d3eeAA)'}}>🛒</span>
           </div>
@@ -45,7 +45,7 @@ export default function DashboardPage() {
           <div className="card-value">1,240</div>
           <div className="card-diff text-green-600">+2.1%</div>
         </div>
-        <div className="dashboard-card" style={{'--card-accent': '#f59e42'}}>
+        <div className="dashboard-card" style={{'--card-accent': '#f59e42'} as any}>
           <div className="card-icon bg-gradient-to-tr from-yellow-400 to-yellow-700 shadow-lg">
             <span style={{fontSize: '2.6rem', filter: 'drop-shadow(0 2px 8px #f59e42AA)'}}>📦</span>
           </div>
@@ -53,7 +53,7 @@ export default function DashboardPage() {
           <div className="card-value">780</div>
           <div className="card-diff text-red-500">-1.3%</div>
         </div>
-        <div className="dashboard-card" style={{'--card-accent': '#a855f7'}}>
+        <div className="dashboard-card" style={{'--card-accent': '#a855f7'} as any}>
           <div className="card-icon bg-gradient-to-tr from-purple-400 to-purple-700 shadow-lg">
             <span style={{fontSize: '2.6rem', filter: 'drop-shadow(0 2px 8px #a855f7AA)'}}>💬</span>
           </div>
