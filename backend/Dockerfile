@@ -1,9 +1,13 @@
-# Dockerfile para backend mengsinch.ia
-FROM node:20-alpine
+# Dockerfile optimizado multi-stage para backend mengsinch.ia
+FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package.json ./
 COPY prisma ./prisma
-RUN npm install --production
+RUN npm ci --omit=dev
 COPY . .
+
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=builder /app ./
 EXPOSE 3000
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]

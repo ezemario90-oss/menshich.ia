@@ -1,0 +1,9 @@
+__turbopack_load_page_chunks__("/channels", [
+  "static/chunks/03f02ke9c7olf.js",
+  "static/chunks/0uw~ov22uo1v0.js",
+  "static/chunks/0b0-kvgrj_4b4.js",
+  "static/chunks/17t1f-uh494mw.js",
+  "static/chunks/03-nqodmstmeo.js",
+  "static/chunks/0ks06x~bq3din.css",
+  "static/chunks/turbopack-0vozajpa.97_o.js"
+])

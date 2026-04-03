@@ -18,7 +18,10 @@ export default function LoginPage() {
     const data = await response.json();
     if (response.ok && data.token) {
       localStorage.setItem("admin_token", data.token);
-      window.location.href = "/dashboard";
+      // Redirigir solo en el cliente
+      if (typeof window !== "undefined") {
+        window.location.href = "/dashboard";
+      }
     } else {
       setError(data.error || "Usuario o contraseña incorrectos");
     }

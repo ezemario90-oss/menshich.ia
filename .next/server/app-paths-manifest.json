@@ -4,12 +4,9 @@
   "/api/pedidos/route": "app/api/pedidos/route.js",
   "/api/productos/route": "app/api/productos/route.js",
   "/api/usuarios/route": "app/api/usuarios/route.js",
-  "/configuracion/page": "app/configuracion/page.js",
   "/dashboard/page": "app/dashboard/page.js",
   "/login/page": "app/login/page.js",
   "/marca/page": "app/marca/page.js",
   "/pedidos/page": "app/pedidos/page.js",
-  "/perfil/page": "app/perfil/page.js",
-  "/productos/page": "app/productos/page.js",
   "/usuarios/page": "app/usuarios/page.js"
 }

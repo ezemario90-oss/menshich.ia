@@ -4,12 +4,9 @@
   "/api/pedidos/route": "/api/pedidos",
   "/api/productos/route": "/api/productos",
   "/api/usuarios/route": "/api/usuarios",
-  "/configuracion/page": "/configuracion",
   "/dashboard/page": "/dashboard",
   "/login/page": "/login",
   "/marca/page": "/marca",
   "/pedidos/page": "/pedidos",
-  "/perfil/page": "/perfil",
-  "/productos/page": "/productos",
   "/usuarios/page": "/usuarios"
 }

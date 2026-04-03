@@ -1,9 +1,29 @@
+"use client";
 import "./globals.css";
 import "./globals.css";
 import "./styles/SidebarFuturista.css";
+
 import Sidebar from "../components/Sidebar";
+import { useEffect } from "react";
 
 export default function RootLayout({ children }) {
+  // Alternar modo claro/oscuro
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("theme");
+      if (saved === "dark") document.body.classList.add("dark");
+      else document.body.classList.remove("dark");
+    }
+  }, []);
+
+  function toggleTheme() {
+    if (typeof window !== "undefined") {
+      document.body.classList.toggle("dark");
+      const isDark = document.body.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    }
+  }
+
   return (
     <html lang="es" data-theme="default">
       <body className="bg-[rgb(var(--bg))] text-[rgb(var(--text))]">
@@ -15,7 +35,7 @@ export default function RootLayout({ children }) {
           {/* Contenido principal */}
           <div className="flex-1 flex flex-col">
             {/* Topbar */}
-            <header className="h-14 flex items-center justify-between px-4 border-b bg-white border-gray-200">
+            <header className="h-14 flex items-center justify-between px-4 border-b bg-white border-gray-200 dark:bg-[rgb(var(--surface))] dark:border-gray-700">
               <div className="flex items-center gap-3">
                 <button className="md:hidden" aria-label="Abrir menú"></button>
                 <div className="w-full max-w-md">
@@ -23,10 +43,12 @@ export default function RootLayout({ children }) {
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <button aria-label="Cambiar tema" className="p-2 rounded-md bg-gray-100 hover:bg-gray-200">🌗</button>
+                <button aria-label="Cambiar tema" className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700" onClick={toggleTheme}>
+                  🌗
+                </button>
                 <div className="flex items-center gap-2">
                   <span className="text-sm">Admin</span>
-                  <div className="w-8 h-8 rounded-full bg-gray-300" />
+                  <div className="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-700" />
                 </div>
               </div>
             </header>

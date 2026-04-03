@@ -1,80 +1,111 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
     "/": [
-      "static/chunks/0sw1yu-liib1f.js",
-      "static/chunks/0n.5nhivdr01r.js",
-      "static/chunks/0nktgd3l_tb3y.js",
+      "static/chunks/0anit68izq9q9.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/17t1f-uh494mw.js",
       "static/chunks/03-nqodmstmeo.js",
-      "static/chunks/0z.srcna~vh7t.css",
-      "static/chunks/turbopack-12~3386rgkm-7.js"
+      "static/chunks/0ks06x~bq3din.css",
+      "static/chunks/turbopack-0wouz8.hqyt41.js"
     ],
     "/_app": [
-      "static/chunks/0ybl-a_9_mx3k.js",
-      "static/chunks/0nktgd3l_tb3y.js",
-      "static/chunks/0n.5nhivdr01r.js",
-      "static/chunks/turbopack-10_y0zn6.t.mc.js"
+      "static/chunks/0rxwb7u9kwe72.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/17t1f-uh494mw.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/turbopack-0um00khrlsfcv.js"
     ],
     "/_error": [
-      "static/chunks/01l5bwcega.vu.js",
-      "static/chunks/0nktgd3l_tb3y.js",
-      "static/chunks/0n.5nhivdr01r.js",
-      "static/chunks/turbopack-157x1odck~m78.js"
+      "static/chunks/18c5l452dawuq.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/17t1f-uh494mw.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/turbopack-066mw9gbn5ibm.js"
     ],
     "/brand": [
-      "static/chunks/0_9~wsuz.m3rf.js",
-      "static/chunks/0n.5nhivdr01r.js",
-      "static/chunks/0nktgd3l_tb3y.js",
+      "static/chunks/0kiut8e_6ny-4.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/17t1f-uh494mw.js",
       "static/chunks/03-nqodmstmeo.js",
-      "static/chunks/0z.srcna~vh7t.css",
-      "static/chunks/turbopack-065gmnh_6z4ge.js"
+      "static/chunks/0ks06x~bq3din.css",
+      "static/chunks/turbopack-17u~yim6v0was.js"
     ],
     "/channels": [
-      "static/chunks/0.tre5bjzw1ag.js",
-      "static/chunks/0n.5nhivdr01r.js",
-      "static/chunks/0nktgd3l_tb3y.js",
+      "static/chunks/03f02ke9c7olf.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/17t1f-uh494mw.js",
       "static/chunks/03-nqodmstmeo.js",
-      "static/chunks/0z.srcna~vh7t.css",
-      "static/chunks/turbopack-0ey~vjcofyadq.js"
+      "static/chunks/0ks06x~bq3din.css",
+      "static/chunks/turbopack-0vozajpa.97_o.js"
+    ],
+    "/configuracion": [
+      "static/chunks/01lo6sy~iyy5w.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/17t1f-uh494mw.js",
+      "static/chunks/turbopack-0-c_su2n940p-.js"
     ],
     "/configure-channels": [
-      "static/chunks/0xna54kr36l8p.js",
-      "static/chunks/0n.5nhivdr01r.js",
-      "static/chunks/0nktgd3l_tb3y.js",
+      "static/chunks/0isg96w1w24fl.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/17t1f-uh494mw.js",
       "static/chunks/03-nqodmstmeo.js",
-      "static/chunks/0z.srcna~vh7t.css",
-      "static/chunks/turbopack-0ra7mcy.-larp.js"
+      "static/chunks/0ks06x~bq3din.css",
+      "static/chunks/turbopack-0p97q33gu9la2.js"
     ],
     "/orders": [
-      "static/chunks/058p6c338n8_d.js",
-      "static/chunks/0n.5nhivdr01r.js",
-      "static/chunks/0nktgd3l_tb3y.js",
+      "static/chunks/0i6k8-nx9c0f0.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/17t1f-uh494mw.js",
       "static/chunks/03-nqodmstmeo.js",
-      "static/chunks/0z.srcna~vh7t.css",
-      "static/chunks/turbopack-0hg5wnovl_01f.js"
+      "static/chunks/0ks06x~bq3din.css",
+      "static/chunks/turbopack-0q5hjx9_5ll2y.js"
+    ],
+    "/perfil": [
+      "static/chunks/13.phmlrea_.7.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/17t1f-uh494mw.js",
+      "static/chunks/turbopack-0hzw3q~717c~z.js"
+    ],
+    "/productos": [
+      "static/chunks/0z2w76zgpmzoy.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/17t1f-uh494mw.js",
+      "static/chunks/turbopack-0vci_0rtm9hr-.js"
     ],
     "/products": [
-      "static/chunks/09w6hjal43kjj.js",
-      "static/chunks/0n.5nhivdr01r.js",
-      "static/chunks/0nktgd3l_tb3y.js",
+      "static/chunks/0jf3~-go~_x-~.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/17t1f-uh494mw.js",
       "static/chunks/03-nqodmstmeo.js",
-      "static/chunks/0z.srcna~vh7t.css",
-      "static/chunks/turbopack-0aft.ey109~ru.js"
+      "static/chunks/0ks06x~bq3din.css",
+      "static/chunks/turbopack-0vfv6vqq8888~.js"
     ],
     "/profile": [
-      "static/chunks/0q552g349se0b.js",
-      "static/chunks/0n.5nhivdr01r.js",
-      "static/chunks/0nktgd3l_tb3y.js",
+      "static/chunks/0ej7milph46ac.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/17t1f-uh494mw.js",
       "static/chunks/03-nqodmstmeo.js",
-      "static/chunks/0z.srcna~vh7t.css",
-      "static/chunks/turbopack-03n-7upvngtjv.js"
+      "static/chunks/0ks06x~bq3din.css",
+      "static/chunks/turbopack-0~aa2j_xat0tp.js"
     ],
     "/users": [
-      "static/chunks/0gi76edttd_0c.js",
-      "static/chunks/0n.5nhivdr01r.js",
-      "static/chunks/0nktgd3l_tb3y.js",
+      "static/chunks/10hm~arpv2mhu.js",
+      "static/chunks/0uw~ov22uo1v0.js",
+      "static/chunks/0b0-kvgrj_4b4.js",
+      "static/chunks/17t1f-uh494mw.js",
       "static/chunks/03-nqodmstmeo.js",
-      "static/chunks/0z.srcna~vh7t.css",
-      "static/chunks/turbopack-0llqlm5y12r_5.js"
+      "static/chunks/0ks06x~bq3din.css",
+      "static/chunks/turbopack-0063kr5f5mr14.js"
     ]
   },
   "devFiles": [],
@@ -82,9 +113,9 @@ globalThis.__BUILD_MANIFEST = {
     "static/chunks/03~yq9q893hmn.js"
   ],
   "lowPriorityFiles": [
-    "static/l7g8eqo0VDJb386UncfKM/_buildManifest.js",
-    "static/l7g8eqo0VDJb386UncfKM/_ssgManifest.js",
-    "static/l7g8eqo0VDJb386UncfKM/_clientMiddlewareManifest.js"
+    "static/XaaIJDBvJSm-qq1bsESBJ/_buildManifest.js",
+    "static/XaaIJDBvJSm-qq1bsESBJ/_ssgManifest.js",
+    "static/XaaIJDBvJSm-qq1bsESBJ/_clientMiddlewareManifest.js"
   ],
   "rootMainFiles": [
     "static/chunks/0bzupvr5gt3k9.js",

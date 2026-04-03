@@ -1,11 +1,6 @@
-/* Variables globales para fondo y texto */
-:root {
-  --bg: 245, 245, 255;
-  --text: 30, 30, 40;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@700&display=swap');
 
+/* Variables globales para modo claro y oscuro */
 :root {
   --bg: 240,245,255;
   --surface: 255,255,255;
@@ -14,9 +9,99 @@
   --brand: 59,130,246;
   --brand-600: 37,99,235;
   --brand-700: 29,78,216;
+  --card-glass: rgba(255,255,255,0.7);
+  --shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
 }
 
-body { border: 10px solid blue !important; }
+body.dark {
+  --bg: 24,24,32;
+  --surface: 32,34,48;
+  --text: 230,230,240;
+  --muted: 140,140,160;
+  --brand: 59,130,246;
+  --brand-600: 37,99,235;
+  --brand-700: 29,78,216;
+  --card-glass: rgba(32,34,48,0.7);
+  --shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+}
+
+body {
+  background: linear-gradient(120deg, rgb(var(--bg)), rgb(var(--surface)) 80%);
+  color: rgb(var(--text));
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Dashboard principal */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px 0;
+  background: none;
+}
+
+.dashboard-title {
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 32px;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 24px #00fff7cc, 0 0 32px #fff200cc;
+  color: rgb(var(--text));
+  text-align: center;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dashboard-card {
+  background: var(--card-glass);
+  box-shadow: var(--shadow);
+  border-radius: 24px;
+  padding: 36px 48px;
+  min-width: 220px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+  border: 1.5px solid rgba(var(--brand), 0.13);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  backdrop-filter: blur(12px) saturate(1.2);
+}
+.dashboard-card:hover {
+  box-shadow: 0 12px 48px 0 #00fff7cc, 0 0 32px #7f00ff99;
+  transform: translateY(-8px) scale(1.04);
+  background: linear-gradient(120deg, var(--card-glass), rgba(var(--brand),0.08));
+}
+.dashboard-card-title {
+  font-size: 1.1rem;
+  color: rgb(var(--muted));
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.dashboard-card-value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: rgb(var(--text));
+  margin-bottom: 8px;
+}
+.dashboard-card-trend {
+  font-size: 1rem;
+  color: rgb(var(--brand));
+  font-weight: 700;
+}
 .sidebar-nav {
   padding: 32px 0 32px 0;
   background: linear-gradient(135deg, rgba(30,32,60,0.92) 60%, rgba(0,255,247,0.10) 100%) !important;
@@ -49,11 +134,12 @@ body { border: 10px solid blue !important; }
   position: relative;
   overflow: hidden;
 }
+/* Corregido: mover @import al inicio y quitar token inválido en hover */
 .sidebar-link:hover {
   background: linear-gradient(90deg, #3B82F6 0%, #7f00ff 100%);
   color: #fff200;
   box-shadow: 0 4px 32px #3B82F6cc, 0 0px 0px rgba(0,0,0,0.00);
-  transform: translateY(-2px) scale(1.03);
+  /* transform: translateY(-2px) scale(1.03); */
 }
 /* --- Sidebar styles migrated from Sidebar.tsx --- */
 /* Google Fonts Orbitron import for global use */
@@ -80,8 +166,6 @@ body { border: 10px solid blue !important; }
   transition: box-shadow 0.3s, transform 0.3s;
   perspective: 400px;
 }
-  transition: box-shadow 0.3s, transform 0.3s;
-  perspective: 400px;
 .sidebar-link {
   display: flex;
   align-items: center;
