@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/marca/layout,_N_T_/marca/page,_N_T_/marca"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/marca/__PAGE__",
+    "/marca",
+    "/_index",
+    "/_head"
+  ]
+}

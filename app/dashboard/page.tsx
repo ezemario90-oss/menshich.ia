@@ -4,7 +4,8 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 export default function DashboardPage() {
-  const { data: session, status } = useSession();
+  const sessionData = useSession() || {};
+  const { data: session, status } = sessionData;
   const router = useRouter();
 
   if (status === "loading") return <div className="p-6">Cargando...</div>;

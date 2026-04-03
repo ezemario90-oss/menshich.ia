@@ -4,7 +4,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function PedidosPage() {
-  const { data: session, status } = useSession();
+  const sessionData = useSession() || {};
+  const { data: session, status } = sessionData;
   const router = useRouter();
   const [pedidos, setPedidos] = useState([]);
   const [loading, setLoading] = useState(true);

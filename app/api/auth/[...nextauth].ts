@@ -12,7 +12,7 @@ export const authOptions = {
       async authorize(credentials) {
         // Mock: acepta cualquier usuario con contraseña "demo"
         if (credentials?.email && credentials?.password === "demo") {
-          return { id: 1, name: "Usuario Demo", email: credentials.email };
+          return { id: "1", name: "Usuario Demo", email: credentials.email };
         }
         return null;
       },

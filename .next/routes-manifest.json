@@ -1,0 +1,165 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "hybrid",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/pedidos",
+      "regex": "^/api/pedidos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/pedidos(?:/)?$"
+    },
+    {
+      "page": "/api/productos",
+      "regex": "^/api/productos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/productos(?:/)?$"
+    },
+    {
+      "page": "/api/usuarios",
+      "regex": "^/api/usuarios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/usuarios(?:/)?$"
+    },
+    {
+      "page": "/brand",
+      "regex": "^/brand(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/brand(?:/)?$"
+    },
+    {
+      "page": "/channels",
+      "regex": "^/channels(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/channels(?:/)?$"
+    },
+    {
+      "page": "/configuracion",
+      "regex": "^/configuracion(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/configuracion(?:/)?$"
+    },
+    {
+      "page": "/configure-channels",
+      "regex": "^/configure\\-channels(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/configure\\-channels(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/marca",
+      "regex": "^/marca(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/marca(?:/)?$"
+    },
+    {
+      "page": "/orders",
+      "regex": "^/orders(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/orders(?:/)?$"
+    },
+    {
+      "page": "/pedidos",
+      "regex": "^/pedidos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pedidos(?:/)?$"
+    },
+    {
+      "page": "/perfil",
+      "regex": "^/perfil(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/perfil(?:/)?$"
+    },
+    {
+      "page": "/productos",
+      "regex": "^/productos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/productos(?:/)?$"
+    },
+    {
+      "page": "/products",
+      "regex": "^/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products(?:/)?$"
+    },
+    {
+      "page": "/profile",
+      "regex": "^/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/profile(?:/)?$"
+    },
+    {
+      "page": "/users",
+      "regex": "^/users(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/users(?:/)?$"
+    },
+    {
+      "page": "/usuarios",
+      "regex": "^/usuarios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/usuarios(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

@@ -1,8 +1,1 @@
-import { defineConfig } from '@prisma/cli';
-
-export default defineConfig({
-  datasource: {
-    provider: 'postgresql',
-    url: process.env.DATABASE_URL,
-  },
-});
+// Este archivo no es necesario. Prisma se configura mediante schema.prisma y variables de entorno.

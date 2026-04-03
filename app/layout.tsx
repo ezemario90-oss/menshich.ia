@@ -2,16 +2,14 @@ import "./globals.css";
 import "./globals.css";
 import "./styles/SidebarFuturista.css";
 import Sidebar from "../components/Sidebar";
-import { useState } from "react";
 
 export default function RootLayout({ children }) {
-  const [collapsed, setCollapsed] = useState(false);
   return (
     <html lang="es" data-theme="default">
       <body className="bg-[rgb(var(--bg))] text-[rgb(var(--text))]">
         <div className="flex h-screen">
           {/* Sidebar futurista único */}
-          <aside className={`sidebar ${collapsed ? "w-16" : "w-64"} transition-all duration-200 flex flex-col`}>
+          <aside className="sidebar w-64 transition-all duration-200 flex flex-col">
             <Sidebar />
           </aside>
           {/* Contenido principal */}
