@@ -4,17 +4,26 @@ import CredentialsProvider from "next-auth/providers/credentials";
 export const authOptions = {
   providers: [
     CredentialsProvider({
-      name: "Email",
+      name: "Usuario",
       credentials: {
-        email: { label: "Correo", type: "email", placeholder: "correo@cliente.com" },
+        username: { label: "Usuario", type: "text", placeholder: "usuario" },
         password: { label: "Contraseña", type: "password" },
       },
       async authorize(credentials) {
-        // Mock: acepta cualquier usuario con contraseña "demo"
-        if (credentials?.email && credentials?.password === "demo") {
-          return { id: "1", name: "Usuario Demo", email: credentials.email };
+        if (!credentials?.username || !credentials?.password) return null;
+        try {
+          const res = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username: credentials.username, password: credentials.password })
+          });
+          if (!res.ok) return null;
+          const data = await res.json();
+          // Puedes devolver más datos del usuario si tu backend los retorna
+          return { id: data.user?.id || data.user?.username || credentials.username, name: data.user?.username || credentials.username, email: data.user?.email || "" };
+        } catch (e) {
+          return null;
         }
-        return null;
       },
     }),
   ],
