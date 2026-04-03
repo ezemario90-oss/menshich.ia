@@ -10,7 +10,7 @@ type Props = {
 
 export default function MetricCard({ title, value, delta, icon, color = "bg-brand-500" }: Props) {
   return (
-    <div className="dashboard-card animate-fade-in" style={{'--card-accent': color}}>
+    <div className="dashboard-card animate-fade-in" style={{ ['--card-accent' as any]: color }}>
       <div className="card-icon bg-gradient-to-tr from-blue-400 to-blue-700">
         {icon ?? <span>🏷️</span>}
       </div>
