@@ -1,1 +1,7 @@
-// Este archivo no es necesario. Prisma se configura mediante schema.prisma y variables de entorno.
+import { defineConfig } from '@prisma/internals';
+
+export default defineConfig({
+  datasource: {
+    url: process.env.DATABASE_URL,
+  },
+});
