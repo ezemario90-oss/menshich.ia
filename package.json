@@ -11,6 +11,7 @@
   "dependencies": {
     "@next-auth/prisma-adapter": "latest",
     "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "25.5.0",
     "autoprefixer": "^10.4.27",
     "next": "latest",
     "next-auth": "^4.24.13",
@@ -18,8 +19,7 @@
     "postcss": "^8.5.8",
     "react": "latest",
     "react-dom": "latest",
-    "tailwindcss": "^4.2.2",
-    "@types/node": "25.5.0"
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@prisma/client": "^7.6.0",

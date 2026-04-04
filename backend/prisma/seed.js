@@ -2,6 +2,18 @@
 const prisma = require('../config/prismaClient');
 
 async function main() {
+  // Usuario admin
+  await prisma.user.upsert({
+    where: { username: 'admin' },
+    update: {},
+    create: {
+      username: 'admin',
+      email: 'admin@demo.com',
+      password: 'admin123',
+      paymentStatus: 'active',
+    },
+  });
+
   // Productos de ejemplo
   const product1 = await prisma.product.create({
     data: {
