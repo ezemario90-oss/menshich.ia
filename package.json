@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx turbo run build",
     "start": "next start",
     "prisma:migrate": "prisma migrate dev --name init"
   },
@@ -25,6 +25,7 @@
     "@prisma/client": "^7.6.0",
     "@types/react": "^19.2.14",
     "prisma": "^7.6.0",
+    "turbo": "^2.9.4",
     "typescript": "latest"
   },
   "engines": {
