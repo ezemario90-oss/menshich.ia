@@ -1,10 +1,10 @@
-import { defineConfig } from '@prisma/internals';
+const { defineConfig } = require('@prisma/internals');
 
-export default defineConfig({
-    datasource: {
-        db: {
-            provider: 'postgresql',
-            url: { fromEnvVar: 'DATABASE_URL' },
-        },
+module.exports = defineConfig({
+  datasource: {
+    db: {
+      provider: 'postgresql',
+      url: { fromEnvVar: 'DATABASE_URL' },
     },
+  },
 });
