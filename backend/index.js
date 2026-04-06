@@ -8,6 +8,7 @@ cron.schedule('0 9 * * *', async () => {
   await checkRenewalReminders();
 });
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
 const whatsappRouter = require('./routes/webhookWhatsApp');
@@ -16,7 +17,13 @@ const instagramRouter = require('./routes/webhookInstagram');
 const adminRouter = require('./routes/admin');
 const webhookPaddle = require('./routes/webhookPaddle');
 
+
 const app = express();
+// Configura CORS para aceptar peticiones del frontend en Render
+app.use(cors({
+  origin: 'https://TU_DOMINIO_FRONTEND', // Reemplaza con la URL de tu frontend en Render
+  credentials: true
+}));
 app.use(bodyParser.json());
 
 // Rutas de canales

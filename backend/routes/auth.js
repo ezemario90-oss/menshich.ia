@@ -21,7 +21,16 @@ router.post('/login', async (req, res) => {
     return res.status(403).json({ error: 'Pago mensual vencido. Acceso bloqueado.' });
   }
   const token = jwt.sign({ username }, JWT_SECRET, { expiresIn: '2h' });
-  return res.json({ token });
+  // Devolver el usuario junto con el token para NextAuth
+  return res.json({
+    token,
+    user: {
+      id: user.id,
+      username: user.username,
+      email: user.email,
+      paymentStatus: user.paymentStatus
+    }
+  });
 });
 
 module.exports = router;

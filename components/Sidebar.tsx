@@ -11,6 +11,8 @@ const sections = [
   { label: 'Canales', icon: '🔗', href: '/canales' },
   { label: 'Configurar canales', icon: '⚙️', href: '/configurar-canales' },
   { label: 'Mi Marca', icon: '⭐', href: '/marca' },
+  // Enlace a la ayuda para conectar redes sociales
+  { label: 'Ayuda redes sociales', icon: '❓', href: '/ayuda' },
 ];
 
 const Sidebar: React.FC = () => {
