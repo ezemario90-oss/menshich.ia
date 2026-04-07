@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Prisma migrate deploy y seed",
+			"type": "shell",
+			"command": "npx prisma migrate deploy && node backend/prisma/seed.js",
+			"group": "build"
+		}
+	]
+}
